@@ -1,0 +1,56 @@
+{% load static %}
+{% load socialaccount %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup to Resume_Hubb</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script src="https://kit.fontawesome.com/f6816dd194.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <script defer src="{% static 'js/signup.js' %}"></script>
+</head>
+<!-- <h1  style="color: aqua;margin-top:3%;"><i><strong>Resume_Hubb</strong></i></h1> -->
+<img src="{% static 'img/newestlogo.png' %}" width="50%" height="50%">
+
+</pre>
+<body id= style="background-image: url('{% static 'img/wallpaperfla.jpg' %}');>
+    <div class="signup-page">
+        <form id="form" method="post" name="signup">
+            {% csrf_token %}
+            <h1>Sign up</h1>
+            <div class="input-control">
+                <input type="name" name="username" id="username" placeholder="Enter Your Name...">
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <input type="text" name="email" id="email" placeholder="Enter Email...">
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <input type="password" name="password1" id="password1" placeholder="Enter Password...">
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <input type="password" name="password2" id="password2" placeholder="Confirm Password...">
+                <div class="error"></div>
+            </div>
+            <button type="submit" class="btn">Signup</button>
+            <p>or signup with</p>
+            <div class="icons">
+                <div>
+                    <a href="{% provider_login_url 'facebook' %}"><i class="fab fa-facebook-square"></i><span style="color: rgb(246, 239, 239);">acebook</span></a>
+                </div>
+                <div>
+                    <a href="{% provider_login_url 'google' %}"><i class="fab fa-google"></i><span style="color: rgb(248, 245, 245);">oogle</span></a>
+                </div>
+            </div>
+            <a href="{% url 'login' %}"><P style="color: greenyellow">i have already account</P></a>
+            <br/>
+        </form>
+    </div>
+</body>
+</html>

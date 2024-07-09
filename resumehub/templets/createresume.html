@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title style="color: red;">Resume Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background : linear-gradient(to bottom right, violet, indigo, blue, green, yellow, orange, red);
+            margin: 0;
+        }
+
+        /* Add some basic styles to make the form look nicer */
+        form {
+            background-color: #000000;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 50px;
+            margin-bottom: 30px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: aqua;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+        }
+
+        textarea {
+            height: 150px;
+        }
+
+        /* input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        } */
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ccc;
+        }
+
+        th {
+            background-color: #eee;
+        }
+
+        /* Style the form table */
+        #education-table {
+            margin-bottom: 40px;
+        }
+
+        #education-table th,
+        #education-table td {
+            padding: 12px;
+            border: none;
+        }
+
+        #education-table th {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        /* Add a "add row" button for the education table */
+        #add-row-btn {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 8px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        #add-row-btn:hover {
+            background-color: #45a049;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover{
+            background-color: #539bce;
+        }
+    </style>
+</head>
+
+<body >
+    <h1 style="color: rgb(245, 241, 9);">Resume Form</h1>
+    <form id="Resume" method="post" name="Resume" action="{% url 'createresume' %}">
+        {% csrf_token %}
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Phone:</label>
+        <input type="text" id="phone" name="phone">
+
+        <label for="address">Address:</label>
+        <textarea id="address" name="address"></textarea>
+
+        <label for="work-ex">Work Experience:</label>
+        <textarea id="work-experience" name="work-experience"></textarea>
+
+        <fieldset>
+            <legend style="color: white;">Education</legend>
+            <select class="form-control dropdown" id="education" name="education">
+                <option value="" selected="selected" disabled="disabled">-- select one --</option>
+                <option value="No formal education">No formal education</option>
+                <option value="Primary education">Primary education</option>
+                <option value="Secondary education">Secondary education or high school</option>
+                <option value="GED">GED</option>
+                <option value="Vocational qualification">Vocational qualification</option>
+                <option value="Bachelor's degree">Bachelor's degree</option>
+                <option value="Master's degree">Master's degree</option>
+                <option value="Doctorate or higher">Doctorate or higher</option>
+            </select>
+        </fieldset>
+        <table>
+            <caption>Education Qualifications:</caption>
+            <thead>
+                <tr>
+                    <th>Qualification</th>
+                    <th>Institution</th>
+                    <th>Year</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="color: white;">Bachelor's Degree</td>
+                    <td ><input type="text" name="degree" ></td>
+                    <td style="color: white;"><input type="number" name="dyear" >to<input type="number" name="d1year" ></td>
+                </tr>
+                <tr>
+                    <td style="color: white;">Intermediate</td>
+                    <td><input type="text" name="intermediate" ></td>
+                    <td style="color: white;"><input type="number" name="iyear" >to<input type="number" name="i1year"</td>
+                </tr>
+                <tr>
+                    <td style="color: white;">SSC</td>
+                    <td><input type="text" name="school" ></td>
+                    <td style="color: white;"><input type="number" name="syear" >to<input type="number" name="s1year"</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <label for="skills">Skills:</label>
+        <textarea id="skills" name="skills"></textarea>
+
+        <label for="Certifications">Certifications:</label>
+        <textarea id="certifications" name="certifications"></textarea>
+
+        <label for="achievements">Achievements:</label>
+        <textarea id="achievements" name="achievements"></textarea>
+
+        <!-- <input type="submit" value="Submit"> -->
+        <button type="submit" class="btn">Submit</button>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+{% load static %}
+{% load socialaccount %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login to Resume_Hubb</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script src="https://kit.fontawesome.com/f6816dd194.js" crossorigin="anonymous"></script>
+</head>
+<!-- <h1 style="color: aqua;margin-top:3%;"><i><strong>Resume_Hubb</strong></i></h1> -->
+<img src="{% static 'img/newestlogo.png' %}" width="50%" height="50%">
+
+<body id= style="background-image: url('{% static 'img/pexels-olia-danilevich-5088009.jpg' %}');">
+    <div class="login-page">
+        <h1>Log in</h1>
+        <form method="post">
+            {% csrf_token %}
+            <p style="color: black; font-size: small;">Email:</p>
+            <input type="email" name="email" id="" placeholder="Enter Email...">
+            <p style="color: black; font-size: small;">Password:</p>
+            <input type="password" name="password" id="" placeholder="Enter Password...">
+            <br/>
+            <button type="submit" class="btn">Log in</button>
+            <br/>
+            <p>or login with</p>
+            <div class="icons">
+                <div>
+                    <a href="{% provider_login_url 'facebook' %}"><i class="fab fa-facebook-square"></i><span style="color: white;text-decoration: none;">acebook</span></a>
+                </div>
+                <div>
+                    <a href="{% provider_login_url 'google' %}"><i class="fab fa-google"></i><span style="color: white;text-decoration: none;">oogle</span></a>
+                    <!-- <a href="{% provider_login_url 'google' %}" class="btn btn btn-danger btn-lg btn-block" role="button" aria-pressed="true">Sign in with Google</a> -->
+                </div>
+            </div>
+            <p>
+                Signup to create account
+            </p>
+            <a href="signup" class="btn" style="text-align: center;text-decoration: none; font-size: x-large;"><p>Signup</p></a>
+            
+        </form>
+    </div>
+</body>
+</html>

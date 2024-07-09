@@ -1,0 +1,267 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Hammersmitone',sans-serif;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    background-image: url("/static/img/pexels-olia-danilevich-5088009.jpg");
+    background-size: cover;
+}
+.logo{
+    width: 10%;
+    height: 20%;
+    color: aqua;
+    top: 50%;
+    left: 10%;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    flex-direction: column;
+    transition: all .4s;
+    border-radius: 50px;
+    
+}
+.login-page{
+    font-size: large;
+    width: 35%;
+    height: 85%;
+    /* background: rgb(203, 167, 98); */
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 10000px rgb(0, 0, 0);
+    position: absolute;
+    top: 50%;
+    left: 80%;
+    transform: translate(-50%,-50%);
+    color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: all .4s;
+    border-radius: 100px;
+}
+.login-page:hover{
+    box-shadow: 0 0 100000px rgb(159, 73, 7);
+}
+.login-page h1{
+    margin-bottom: 30px;
+}
+.login-page form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.login-page form input  {
+    width: 350px;
+    height: 35px;
+    margin: 8px;
+    background: rgb(218, 218, 218);
+    border: none;
+    padding-left: 10px;
+    border-radius: 10px;
+    outline: none;
+    transition: all .4s;
+}
+.login-page form input:focus{
+    background: rgb(194, 194, 194);
+}
+.login-page form .btn{
+    width: 250px;
+    height: 35px;
+    margin: 8px;
+    /* background:red; */
+    background:rgb(39, 34, 168);
+    color: #e2e2e2;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all .4s;
+}
+.login-page form .btn:hover{
+    background: transparent;
+    border: 2px solid rgb(80, 215, 31);
+}
+.icons{
+    width: 250px;
+    height: 40px;
+    display: flex;
+    margin: 10px 0;
+    justify-content: space-between;
+    align-items: center;
+}
+.icons div{
+    width: 200px;
+    height: 40px;
+    border: 3px solid #3b5998;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 2px;
+    transition: all .4s;
+    cursor: pointer;
+}
+.icons div:nth-child(2){
+    border: 2px solid #4285f4;
+}
+.icons div i{
+    color: #3b5998;
+    margin: 0px;
+    transition: all .4s;
+}
+.icons div:hover i{
+    color: #e2e2e2;
+}
+.icons div .fa-google{
+    color: #4285f4;
+}
+.icons div:hover:nth-child(1){
+    background: #3b5998;
+    color: #e2e2e2;
+}
+.icons div:hover:nth-child(2){
+    background: #4285f4;
+    color: #e2e2e2;
+}
+.login-page form .btnn{
+    width: 250px;
+    height: 35px;
+    margin: 8px;
+    background:red;
+    color: #e2e2e2;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all .4s;
+}
+.login-page form .btnn:hover{
+    background: transparent;
+    border: 2px solid white;
+}
+.signup-page{
+    font-size: x-large;
+    width: 35%;
+    height: 85%;
+    box-shadow: 0 0 10000px rgb(0, 0, 0);
+    /* background:transparent; */
+    backdrop-filter: blur(5px);
+    position: absolute;
+    top: 50%;
+    left: 80%;
+    transform: translate(-50%,-50%);
+    color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: all .4s;
+    border-radius: 100px;
+}
+.signup-page:hover{
+    box-shadow: 0 0 10000px rgb(179, 109, 23);
+}
+.signup-page h1{
+    margin-bottom: 30px;
+}
+.signup-page form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.signup-page form input  {
+    width: 350px;
+    height: 35px;
+    margin: 8px;
+    background: rgb(218, 218, 218);
+    border: none;
+    padding-left: 10px;
+    border-radius: 10px;
+    outline: none;
+    transition: all .4s;
+}
+.signup-page form input:focus{
+    background: rgb(194, 194, 194);
+}
+.signup-page form .btn{
+    width: 250px;
+    height: 35px;
+    margin: 8px;
+    background:rgb(141, 10, 141);
+    color: #e2e2e2;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all .4s;
+}
+.signup-page form .btn:hover{
+    background: transparent;
+    border: 2px solid white;
+}
+
+
+
+#form {
+    width: 400px;
+    margin: 7vh auto 0 auto;
+    padding: 20px;
+    /* background-color:; */
+    /* backdrop-filter: blur(5px); */
+    /* filter: blur(5px); */
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+#form h1 {
+    color: #0f2027;
+    text-align: center;
+}
+
+#form button {
+    padding: 10px;
+    margin-top: 10px;
+    width: 100%;
+    color: white;
+    background-color: rgb(41, 57, 194);
+    border: none;
+    border-radius: 4px;
+}
+
+.input-control {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-control input {
+    border: 2px solid #f0f0f0;
+	border-radius: 4px;
+	display: block;
+	font-size: 12px;
+	padding: 10px;
+	width: 100%;
+}
+
+.input-control input:focus {
+    outline: 1;
+}
+
+.input-control.success input {
+    border-color: #09c372;
+}
+
+.input-control.error input {
+    border-color: #fc2403;
+}
+
+.input-control .error {
+    color: #b80828;
+    font-size: 12px;
+    height: 13px;
+}
